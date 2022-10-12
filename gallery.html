@@ -1,0 +1,171 @@
+<html>
+<head>
+	<title>Dummy Gallery</title>
+	<link rel="stylesheet" href="BuddysStyles.css">
+	
+	
+</head>
+<body>
+	<div class="title ">
+			<div class="headimg c1"><img src="images.jpeg" class="image" width="100" height="100" alt="image not found">
+			</div>
+			<div class="head c1"><p class="name">Buddy's Pizza</p></div>
+			<div class="head c1">
+				<a href="dummyproject.html" class="link">Home</a>
+				<a href="menu.html" class="link">Menu</a>
+				<a href="about.html" class="link">About Us</a>
+				<a href="gallery.html" class="link">Gallery</a>
+				<a href="franchise.html" class="link">Franchise</a>
+				<a href="ordernow.html" class="link">Order Now</a>
+				<a href="buddyslogin.html" class="link">Login</a>
+			</div>
+			<p style="color:white; text-align:center; font-family: Helvetica, sans-serif"> Gallery </p>
+		</div>
+		
+		<div class="gallerymiddle">
+			<div class="gallery" id="gallery">
+            <div class="gallery-item">
+                <div class="content"><img src="pizza1.jpeg"></div>
+            </div>
+            <div class="gallery-item">
+                <div class="content"><img src="pizza2.jpg" alt=""></div>
+            </div>
+            <div class="gallery-item">
+                <div class="content"><img src="pizza3.jpg" alt=""></div>
+            </div>
+            <div class="gallery-item">
+                <div class="content"><img src="buddys1.jpeg" alt=""></div>
+            </div>
+            <div class="gallery-item">
+                <div class="content"><img src="buddys2.jpeg""></div>
+            </div>
+            <div class="gallery-item">
+                <div class="content"><img src="buddys3.jpeg" alt=""></div>
+            </div>
+            <div class="gallery-item">
+                <div class="content"><img src="buddys4.jpeg" alt=""></div>
+            </div>
+            <div class="gallery-item">
+                <div class="content"><img src="originalGB.png" alt=""></div>
+            </div>
+            <div class="gallery-item">
+                <div class="content"><img src="machurian.jpg" alt=""></div>
+            </div>
+            <div class="gallery-item">
+                <div class="content"><img src="Hakka-Noodles.jpg" alt=""></div>
+            </div>
+            <div class="gallery-item">
+                <div class="content"><img src="margherita.jpeg" alt=""></div>
+            </div>
+            <div class="gallery-item">
+                <div class="content"><img src="peanut.jpeg" alt=""></div>
+            </div>
+            <div class="gallery-item">
+                <div class="content"><img src="soup.jpg" alt=""></div>
+            </div>
+            <div class="gallery-item">
+                <div class="content"><img src="pasta.jpg" alt=""></div>
+            </div>
+            <div class="gallery-item">
+                <div class="content"><img src="pasta1.jpeg" alt=""></div>
+            </div>
+            <div class="gallery-item">
+                <div class="content"><img src="potato_chilly.jpeg" alt=""></div>
+            </div>
+            <div class="gallery-item">
+                <div class="content"><img src="garlicbread.jpg" alt=""></div>
+            </div>
+            <div class="gallery-item">
+                <div class="content"><img src="chana_chaat.jpg" alt=""></div>
+            </div>
+            <div class="gallery-item">
+                <div class="content"><img src="cold_drink.jpeg" alt=""></div>
+            </div>
+            <div class="gallery-item">
+                <div class="content"><img src="brownie.jpeg" alt=""></div>
+            </div>
+            <div class="gallery-item">
+                <div class="content"><img src="nachos_chaat.jpeg" alt=""></div>
+            </div>
+            <div class="gallery-item">
+                <div class="content"><img src="russian_salad.jpg" alt=""></div>
+            </div>
+            <div class="gallery-item">
+                <div class="content"><img src="pizza4.jpeg" alt=""></div>
+            </div>
+            <div class="gallery-item">
+                <div class="content"><img src="pizza5.jpg" alt=""></div>
+            </div>
+		</div>
+		</div> 
+		
+		<div class="end">
+			<div class="endblock1 c1"><p class="info">Timings</p>
+				<pre class="pre">		 Monday - Sunday<br>
+		 11:30 - 10:00</pre>
+			</div>
+												
+			<div class="endblock c1"><p class="info">&nbsp;Stay&nbsp;Connected</p>
+				<pre class="pre">               Follow us on social media channels</pre>
+																	
+			</div>
+			<div class="endblock c1"><p class="info">Contact&nbsp;Us</p>
+				<pre class="pre">           105-106, Kairos, Nr. Manav Mandir,
+           Gurukul Road, Memnagar,
+	   Ahmedabad - 380052<br><br>
+	            +91 9925469600
+			</div>
+			<div class="c2">
+			<br><br>
+			<center>
+				<a href="dummyproject.html" class="bottomlink">Home &nbsp;|</a> 
+				<a href="menu.html" class="bottomlink">Menu &nbsp;|</a>  
+				<a href="about.html" class="bottomlink">About Us &nbsp;|</a> 
+				<a href="gallery.html" class="bottomlink">Gallery &nbsp;|</a> 
+				<a href="franchise.html" class="bottomlink">Franchise &nbsp;|</a> 
+				<a href="ordernow.html" class="bottomlink">Order Now &nbsp;|</a> 
+				<a href="buddyslogin.html" class="bottomlink">Login &nbsp;|</a> 
+			</center>
+			</div>
+		</div> 
+		
+	</div>
+	
+	<script>
+		var gallery = document.querySelector('#gallery');
+var getVal = function (elem, style) { return parseInt(window.getComputedStyle(elem).getPropertyValue(style)); };
+var getHeight = function (item) { return item.querySelector('.content').getBoundingClientRect().height; };
+var resizeAll = function () {
+    var altura = getVal(gallery, 'grid-auto-rows');
+    var gap = getVal(gallery, 'grid-row-gap');
+    gallery.querySelectorAll('.gallery-item').forEach(function (item) {
+        var el = item;
+        el.style.gridRowEnd = "span " + Math.ceil((getHeight(item) + gap) / (altura + gap));
+    });
+};
+gallery.querySelectorAll('img').forEach(function (item) {
+    item.classList.add('byebye');
+    if (item.complete) {
+        console.log(item.src);
+    }
+    else {
+        item.addEventListener('load', function () {
+            var altura = getVal(gallery, 'grid-auto-rows');
+            var gap = getVal(gallery, 'grid-row-gap');
+            var gitem = item.parentElement.parentElement;
+            gitem.style.gridRowEnd = "span " + Math.ceil((getHeight(gitem) + gap) / (altura + gap));
+            item.classList.remove('byebye');
+        });
+    }
+});
+window.addEventListener('resize', resizeAll);
+gallery.querySelectorAll('.gallery-item').forEach(function (item) {
+    item.addEventListener('click', function () {        
+        item.classList.toggle('full');        
+    });
+});
+
+	</script>
+</body>
+
+</html>
